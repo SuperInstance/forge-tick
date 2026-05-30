@@ -227,7 +227,7 @@ impl TickFormatter {
     pub fn format_batch(ticks: &[Tick]) -> String {
         ticks
             .iter()
-            .map(|t| Self::format_compact(t))
+            .map(Self::format_compact)
             .collect::<Vec<_>>()
             .join("\n")
     }
